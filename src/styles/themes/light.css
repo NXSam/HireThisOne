@@ -1,8 +1,8 @@
 /* Light theme tokens. Applied when an ancestor sets [data-theme="light"] (default) */
 [data-theme="light"] {
-  --accent: #FF7A1A; /* brighter for light */
-  --accent-dark: #EA580C;
-  --accent-rgb: 255, 122, 26;
+  --accent: #4C79FF; /* HSL: 225, 100, 65; RBG 76, 121, 255 */
+  --accent-dark: #164FF9; /*HSL: 225, 95, 53; RGB: 22, 79, 249;*/
+  --accent-rgb: 76, 121, 255;
 
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
