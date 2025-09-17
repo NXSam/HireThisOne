@@ -9,12 +9,15 @@ import BlogPagination from '../../components/ui/nav/BlogPagination.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 import FeaturedPost from '../../components/ui/card/FeaturedPost.astro';
 import { calculateReadingTimeFromHtml } from '../../lib/reading';
+import { getEntry } from 'astro:content';
 
 const PAGE_SIZE = 6;
 const posts = (await getCollection('blog')).sort((a,b)=>+b.data.pubDate-+a.data.pubDate);
-const [featured, ...rest] = posts;
-const firstPagePosts = rest.slice(0, PAGE_SIZE);
-const totalPages = Math.max(1, Math.ceil(rest.length / PAGE_SIZE));
+// const [featured, ...rest] = posts;
+const firstPagePosts = posts.slice(0, PAGE_SIZE);
+const totalPages = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
+const featured = await getEntry('blog', 'example-post-1');
+
 let featuredReading = 0;
 if (featured) {
   const { Content } = await render(featured);
