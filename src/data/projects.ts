@@ -39,21 +39,21 @@ export const projects = [
 		ctaLink: "/portfolio/illusion-ranch",
 		// icon: TailwindIcon
 	},
-	{
-		title: "Aquashield Animation",
-		techStack: "Blender • FLIP Fluids • After Effects • Premiere",
-		description: "A tight two-week turn around with full fluid simulation and environment modeling.",
-		ctaText: "Read Case Study →",
-		ctaLink: "#",
-		// icon: PosthogIcon
-	},
-	{
-		title: "Chang'e Animations",
-		techStack: "Blender • Python • Premiere • After Effects • Substance 3D",
-		description: "Working with a tech prototype to create a one of its kind animation I'll never get to experience again.",
-		ctaText: "Read Case Study →",
-		ctaLink: "/portfolio/change-animation",
-		// icon: SupabaseIcon
-	},
+	// {
+	// 	title: "Aquashield Animation",
+	// 	techStack: "Blender • FLIP Fluids • After Effects • Premiere",
+	// 	description: "A tight two-week turn around with full fluid simulation and environment modeling.",
+	// 	ctaText: "Read Case Study →",
+	// 	ctaLink: "#",
+	// 	// icon: PosthogIcon
+	// },
+	// {
+	// 	title: "Chang'e Animations",
+	// 	techStack: "Blender • Python • Premiere • After Effects • Substance 3D",
+	// 	description: "Working with a tech prototype to create a one of its kind animation I'll never get to experience again.",
+	// 	ctaText: "Read Case Study →",
+	// 	ctaLink: "/portfolio/change-animation",
+	// 	// icon: SupabaseIcon
+	// },
 
 ];
