@@ -1,19 +1,19 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
+import GuidePost from '../../layouts/GuidePost.astro';
 import { calculateReadingTimeFromHtml } from '../../lib/reading';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
+	const posts = await getCollection('guides');
 	return posts.map((post) => ({
 		params: { slug: post.id },
 		props: post,
 	}));
 }
-type Props = CollectionEntry<'blog'>;
+type Props = CollectionEntry<'guides'>;
 
 const post = Astro.props;
-const posts = await getCollection('blog');
+const posts = await getCollection('guides');
 // Sort by date descending for navigation
 const sorted = posts.slice().sort((a, b) => +b.data.pubDate - +a.data.pubDate);
 const index = sorted.findIndex((p) => p.id === post.id);
@@ -25,6 +25,6 @@ const html = await Astro.slots.render('default');
 const readingTimeMin = calculateReadingTimeFromHtml(html ?? '');
 ---
 
-<BlogPost {...post.data} prevPost={prev} nextPost={next} readingTimeMin={readingTimeMin}>
+<GuidePost {...post.data} prevPost={prev} nextPost={next} readingTimeMin={readingTimeMin}>
   <Content />
-</BlogPost>
+</GuidePost>

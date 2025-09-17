@@ -2,7 +2,7 @@
 interface Props {
   currentPage: number;
   totalPages: number;
-  basePath?: string; // e.g. '/blog/page'
+  basePath?: string; // e.g. '/guides/page'
 }
 
 const { currentPage, totalPages, basePath = '/guides/page' } = Astro.props as Props;
