@@ -1,0 +1,49 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/sections/Footer.astro';
+import Header from '../../components/sections/Header.astro';
+import GuideHero from '../../components/sections/GuideHero.astro';
+import GuideAllArticles from '../../components/sections/GuideAllArticles.astro';
+import GuidePagination from '../../components/ui/nav/GuidePagination.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import FeaturedPost from '../../components/ui/card/FeaturedPost.astro';
+import { calculateReadingTimeFromHtml } from '../../lib/reading';
+
+const PAGE_SIZE = 6;
+const posts = (await getCollection('guides')).sort((a,b)=>+b.data.pubDate-+a.data.pubDate);
+const [featured, ...rest] = posts;
+const firstPagePosts = rest.slice(0, PAGE_SIZE);
+const totalPages = Math.max(1, Math.ceil(rest.length / PAGE_SIZE));
+let featuredReading = 0;
+if (featured) {
+  const { Content } = await render(featured);
+  const html = await Astro.slots.render('default');
+  featuredReading = calculateReadingTimeFromHtml(html ?? '');
+}
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark" class="dark">
+	<head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    {totalPages > 1 && (
+      <link rel="next" href={`/guides/page/2/`} />
+    )}
+	</head>
+	<body>
+        <Header />
+        <GuideHero title="Guides" subtitle="Practical insights on data analysis, visualization, and getting more from your analytics tools." />
+        <main class="use-utility-layout mx-auto max-w-5xl px-3 py-5 space-y-7">
+            {featured && (
+              <section class="card-surface p-4 md:p-5 hover-lift sw-featured-card">
+                <FeaturedPost post={featured} readingTimeMin={featuredReading} />
+              </section>
+            )}
+
+            <GuideAllArticles posts={firstPagePosts} />
+            <GuidePagination currentPage={1} totalPages={totalPages} />
+        </main>
+        <Footer />
+	</body>
+</html>
