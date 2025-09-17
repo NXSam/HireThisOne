@@ -28,7 +28,7 @@ export const projects = [
 		techStack: "Blender • Python • PHP • Javascript • Wordpress • Magento • Woocommerce • Excel",
 		description: "Automating, upgrading, and improving a small business - one line of code at a time.",
 		ctaText: "Read Case Study →",
-		ctaLink: "#",
+		ctaLink: "/portfolio/procure-inc",
 		// icon: SupabaseIcon
 	},
 	{
@@ -36,7 +36,7 @@ export const projects = [
 		techStack: "Python • Blender • Linux • Premiere • AVID • Photoshop • After Effects • Javascript • PHP • C++",
 		description: "Blending code, technical skill, research, and experience to power a small business.",
 		ctaText: "Read Case Study →",
-		ctaLink: "#",
+		ctaLink: "/portfolio/illusion-ranch",
 		// icon: TailwindIcon
 	},
 	{
