@@ -8,51 +8,52 @@
 
 export const projects = [
 	{
-		title: "Workflow Automation Orchestrator (n8n)",
-		techStack: "n8n • Node.js • TypeScript • PostgreSQL",
-		description: "Event‑driven workflows for data sync, notifications, and back‑office automation. Custom nodes, secrets management, retries, and metrics.",
-		ctaText: "View Repo →",
-		ctaLink: "#",
+		title: "Demo Reel",
+		techStack: "Blender • After Effects • Premiere • Substance 3D • Photoshop • Reality Capture",
+		description: "A decade of work in animation, showcasing products, explaining technology, and teaching the world.",
+		ctaText: "Read More →",
+		ctaLink: "/portfolio/demoreel",
 		// icon: N8nIcon
 	},
 	{
-		title: "SaaS API Starter (Auth, Billing, RBAC)",
-		techStack: "Node.js • TypeScript • PostgreSQL • Supabase • Stripe",
-		description: "Production‑ready REST/GraphQL API with JWT auth, role‑based access, Stripe subscriptions, and rate‑limited endpoints.",
-		ctaText: "Get Source < / >",
+		title: "Hire This One",
+		techStack: "Astro • Node JS • HTML • Obsidian • Cloudflare",
+		description: "A quick write-up about this very site, why I made it, and how it came to be.",
+		ctaText: "Read Case Study →",
 		ctaLink: "#",
 		// icon: SupabaseIcon
 	},
 	{
-		title: "Realtime Chat Service",
-		techStack: "Phoenix • WebSockets • Redis • Docker",
-		description: "Low‑latency chat with channels, presence, and backpressure handling. Includes load tests and horizontal scaling notes.",
-		ctaText: "Live Demo →",
+		title: "Procure Inc Automation, Graphics, and Design",
+		techStack: "Blender • Python • PHP • Javascript • Wordpress • Magento • Woocommerce • Excel",
+		description: "Automating, upgrading, and improving a small business - one line of code at a time.",
+		ctaText: "Read Case Study →",
 		ctaLink: "#",
-		// icon: PhoenixIcon
+		// icon: SupabaseIcon
 	},
 	{
-		title: "Product Analytics Pipeline",
-		techStack: "Node.js • PostHog • PostgreSQL • ClickHouse",
-		description: "Event ingestion, batching, and replay; user properties and cohorts; dashboards for funnels, retention, and feature adoption.",
+		title: "Illusion Ranch",
+		techStack: "Python • Blender • Linux • Premiere • AVID • Photoshop • After Effects • Javascript • PHP • C++",
+		description: "Blending code, technical skill, research, and experience to power a small business.",
+		ctaText: "Read Case Study →",
+		ctaLink: "#",
+		// icon: TailwindIcon
+	},
+	{
+		title: "Aquashield Animation",
+		techStack: "Blender • FLIP Fluids • After Effects • Premiere",
+		description: "A tight two-week turn around with full fluid simulation and environment modeling.",
 		ctaText: "Read Case Study →",
 		ctaLink: "#",
 		// icon: PosthogIcon
 	},
 	{
-		title: "Data Ingestion & ETL",
-		techStack: "Python • Airflow • PostgreSQL • S3",
-		description: "Scheduled extract/transform/load with schema migrations, data quality checks, and partitioned tables for analytics.",
-		ctaText: "View Repo →",
+		title: "Chang'e Animations",
+		techStack: "Blender • Python • Premiere • After Effects • Substance 3D",
+		description: "Working with a tech prototype to create a one of its kind animation I'll never get to experience again.",
+		ctaText: "Read Case Study →",
 		ctaLink: "#",
-		// icon: PythonIcon
+		// icon: SupabaseIcon
 	},
-	{
-		title: "Design System",
-		techStack: "React • TypeScript • Tailwind CSS • Storybook",
-		description: "Accessible UI kit with tokens, theming, and testing. Published as a versioned package with changelogs and docs.",
-		ctaText: "Docs →",
-		ctaLink: "#",
-		// icon: TailwindIcon
-	},
+
 ];
