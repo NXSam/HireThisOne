@@ -8,6 +8,7 @@ import Header from '../components/sections/Header.astro';
 import PostMeta from '../components/ui/meta/PostMeta.astro';
 import ShareButtons from '../components/ui/share/ShareButtons.astro';
 import PostNav from '../components/ui/nav/PostNav.astro';
+import { YouTube } from '@astro-community/astro-embed-youtube';
 
 type portfolioData = CollectionEntry<'portfolio'>['data'];
 type Props = BlogData & { showHeader?: boolean; prevPost?: { id: string; title: string } | null; nextPost?: { id: string; title: string } | null; readingTimeMin?: number;};
@@ -63,6 +64,10 @@ const { title, description, pubDate, updatedDate, heroImage, showImage=true, sho
 			.hero-image {
 				width: 100%;
 			}
+			lite-youtube
+			{
+				max-width: unset !important;
+			}
 			.hero-image img {
 				display: block;
 				margin: 0 auto;
@@ -102,7 +107,12 @@ const { title, description, pubDate, updatedDate, heroImage, showImage=true, sho
 			<article>
                 {showImage && (
                     <div class="hero-image">
-                        {heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+                        {heroImage && <Image width={1020} height={510} src={heroImage} alt={alt} />}
+                    </div>
+                )}
+                {showVideo && (
+                    <div class="hero-image">
+                        {YT && <YouTube id={YT} style="Margin-Left: auto; margin-right: auto; text-align: center"/>}
                     </div>
                 )}
                 <div class="prose">

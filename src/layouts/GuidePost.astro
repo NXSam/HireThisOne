@@ -8,6 +8,7 @@ import Header from '../components/sections/Header.astro';
 import PostMeta from '../components/ui/meta/PostMeta.astro';
 import ShareButtons from '../components/ui/share/ShareButtons.astro';
 import GuideNav from '../components/ui/nav/GuideNav.astro';
+import { YouTube } from '@astro-community/astro-embed-youtube';
 
 type guideData = CollectionEntry<'guide'>['data'];
 const { title, description, pubDate, updatedDate, heroImage, showImage=true, showHeader = true, prevPost = null, nextPost = null, readingTimeMin = 0, showVideo=false, YT="Pending", alt="An image that hasn't yet been captioned. Contact us to fix it (sorry, we missed this one)." } = Astro.props as Props;
@@ -61,6 +62,10 @@ const { title, description, pubDate, updatedDate, heroImage, showImage=true, sho
 			.hero-image {
 				width: 100%;
 			}
+			lite-youtube
+			{
+				max-width: unset !important;
+			}
 			.hero-image img {
 				display: block;
 				margin: 0 auto;
@@ -100,7 +105,12 @@ const { title, description, pubDate, updatedDate, heroImage, showImage=true, sho
 			<article>
                 {showHeader && (
                     <div class="hero-image">
-                        {heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+                        {heroImage && <Image width={1020} height={510} src={heroImage} alt={alt} />}
+                    </div>
+                )}
+                {showVideo && (
+                    <div class="hero-image">
+                        {YT && <YouTube id={YT} style="Margin-Left: auto; margin-right: auto; text-align: center"/>}
                     </div>
                 )}
                 <div class="prose">

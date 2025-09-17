@@ -5,6 +5,9 @@ pubDate: 'Aug 12 2025'
 heroImage: '../../assets/images/example-blog-hero1.jpg'
 category: 'Showcase'
 tags: ['template', 'demo']
+showImage: false
+showVideo: true
+YT: "ulh004Hy_JM"
 ---
 
 This is a sample article used in the starter template. Replace it with your own content.
