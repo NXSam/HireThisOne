@@ -17,6 +17,9 @@ const blog = defineCollection({
             category: z.string().optional(),
 			author: z.string().optional(),
 			showImage: z.boolean().optional(),
+			showVideo: z.boolean().optional(),
+			YT: z.string().optional(),
+			alt: z.string().optional(),
 		}),
 });
 
@@ -35,6 +38,10 @@ const guides = defineCollection({
 			tags: z.array(z.string()).optional(),
             category: z.string().optional(),
 			author: z.string().optional(),
+			showImage: z.boolean().optional(),
+			showVideo: z.boolean().optional(),
+			YT: z.string().optional(),
+			alt: z.string().optional(),
 		}),
 });
 

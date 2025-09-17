@@ -7,9 +7,10 @@ category: Showcase
 tags:
   - template
   - demo
-showImage:
-showVideo: "true"
+showImage: true
+showVideo: false
 YT:
+alt:
 ---
 
 Test Edit with Obsidian.
