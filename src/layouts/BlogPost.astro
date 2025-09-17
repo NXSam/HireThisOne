@@ -10,9 +10,9 @@ import ShareButtons from '../components/ui/share/ShareButtons.astro';
 import PostNav from '../components/ui/nav/PostNav.astro';
 
 type BlogData = CollectionEntry<'blog'>['data'];
-type Props = BlogData & { showHeader?: boolean; prevPost?: { id: string; title: string } | null; nextPost?: { id: string; title: string } | null; readingTimeMin?: number };
+type Props = BlogData & { showHeader?: boolean; prevPost?: { id: string; title: string } | null; nextPost?: { id: string; title: string } | null; readingTimeMin?: number;};
 
-const { title, description, pubDate, updatedDate, heroImage, showHeader = true, prevPost = null, nextPost = null, readingTimeMin = 0 } = Astro.props as Props;
+const { title, description, pubDate, updatedDate, heroImage, showImage=true, showHeader = true, prevPost = null, nextPost = null, readingTimeMin = 0 } = Astro.props as Props;
 ---
 
 <html lang="en" data-theme="dark" class="dark">
@@ -100,7 +100,7 @@ const { title, description, pubDate, updatedDate, heroImage, showHeader = true, 
 		<Header />
 		<main>
 			<article>
-                {showHeader && (
+                {showImage && (
                     <div class="hero-image">
                         {heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
                     </div>
