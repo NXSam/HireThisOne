@@ -12,7 +12,7 @@ import PostNav from '../components/ui/nav/PostNav.astro';
 type BlogData = CollectionEntry<'blog'>['data'];
 type Props = BlogData & { showHeader?: boolean; prevPost?: { id: string; title: string } | null; nextPost?: { id: string; title: string } | null; readingTimeMin?: number;};
 
-const { title, description, pubDate, updatedDate, heroImage, showImage=true, showHeader = true, prevPost = null, nextPost = null, readingTimeMin = 0 } = Astro.props as Props;
+const { title, description, pubDate, updatedDate, heroImage, showImage=true, showHeader = true, prevPost = null, nextPost = null, readingTimeMin= 0, showVideo=false YT="Pending", alt="An image that hasn't yet been captioned. Contact us to fix it (sorry, we missed this one)."  } = Astro.props as Props;
 ---
 
 <html lang="en" data-theme="dark" class="dark">

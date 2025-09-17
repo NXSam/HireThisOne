@@ -9,8 +9,8 @@ tags:
   - demo
 showImage: true
 showVideo: false
-YT:
-alt:
+YT: No
+alt: No
 ---
 
 Test Edit with Obsidian.
