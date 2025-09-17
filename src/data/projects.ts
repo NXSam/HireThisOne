@@ -20,7 +20,7 @@ export const projects = [
 		techStack: "Astro • Node JS • HTML • Obsidian • Cloudflare",
 		description: "A quick write-up about this very site, why I made it, and how it came to be.",
 		ctaText: "Read Case Study →",
-		ctaLink: "#",
+		ctaLink: "/portfolio/hire-this-one",
 		// icon: SupabaseIcon
 	},
 	{
@@ -52,7 +52,7 @@ export const projects = [
 		techStack: "Blender • Python • Premiere • After Effects • Substance 3D",
 		description: "Working with a tech prototype to create a one of its kind animation I'll never get to experience again.",
 		ctaText: "Read Case Study →",
-		ctaLink: "#",
+		ctaLink: "/portfolio/change-animation",
 		// icon: SupabaseIcon
 	},
 
