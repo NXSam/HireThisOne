@@ -1,6 +1,6 @@
 # Hire This One
-## A website to showcase my writing and other work for potential employers
-### Theme/Template/etc from (guihubie)[https://github.com/guihubie/free-astro-template]
+### A website to showcase my writing and other work for potential employers
+**Theme/Template/etc from [guihubie](https://github.com/guihubie/free-astro-templat)**
 
 
 
@@ -34,4 +34,4 @@ I'll also include my work in animation and writing about my experiences. And att
 
 Jump in and enjoy the ride.
 
-This site will eventually go live at (https\://HireThis.One)[https://HireThis.One] 
+This site will eventually go live at [https\://HireThis.One](https://HireThis.One)
