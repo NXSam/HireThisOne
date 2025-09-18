@@ -16,7 +16,7 @@ const posts = (await getCollection('blog')).sort((a,b)=>+b.data.pubDate-+a.data.
 // const [featured, ...rest] = posts;
 const firstPagePosts = posts.slice(0, PAGE_SIZE);
 const totalPages = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
-const featured = await getEntry('blog', 'example-post-1');
+const featured = await getEntry('blog', 'hello-blog');
 
 let featuredReading = 0;
 if (featured) {
@@ -36,7 +36,7 @@ if (featured) {
 	</head>
 	<body>
         <Header />
-        <BlogHero title="Blog" subtitle="The thoughts of a movie lover, creator, coder, and TTRPG player." />
+        <BlogHero title="Blog" subtitle="Thoughts on media, coding, and technology." />
         <main class="use-utility-layout mx-auto max-w-5xl px-3 py-5 space-y-7">
             {featured && (
               <section class="card-surface p-4 md:p-5 hover-lift sw-featured-card">
