@@ -17,7 +17,7 @@ const posts = (await getCollection('guides')).sort((a,b)=>+b.data.pubDate-+a.dat
 const firstPagePosts = posts.slice(0, PAGE_SIZE);
 const totalPages = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
 
-const featured = await getEntry('guides', 'example-post-1');
+const featured = await getEntry('guides', 'getting-started');
 let featuredReading = 0;
 if (featured) {
   const { Content } = await render(featured);
