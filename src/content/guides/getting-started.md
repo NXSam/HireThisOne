@@ -58,7 +58,7 @@ The key to building our entire website is Astro. When we make a website, our fir
 
 We're going to build with a tool that already exists. More than that, we're going to build with one that makes our lives quicker and easier. Astro helps us to simplify our work. It can put parts of the website together for us, so we can focus on editing just a few files. It's like have a form, everything is already in its place, we just have to fill it out.
 
-![A picture of Astro's homepage - astro.build](../../assets/images/guide-1/Astro_front.png)
+![A picture of Astro's homepage - astro.build](../../assets/images/guide-1/Astro_Front.png)
 
 You can [read more about astro at Astro.build](https://astro.build). We'll cover installing it later. Thanks to Node JS, we can install it with a built-in command directly from node. It's another thing that makes our lives a little easier.
 
