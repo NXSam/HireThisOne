@@ -1,9 +1,8 @@
 ---
-title: Web Development Overview
-description: An overview of the tools, setup, and general process of building a website. Start your development journey here.
+title: Project Overview
+description: A top down look at the project and an index of the guides in their proper order.
 pubDate: Sep 18 2025
 heroImage: ../../assets/images/guide-1/Guide-1-cover.jpg
-category: Showcase
 tags:
   - development
   - guide
@@ -22,6 +21,6 @@ The links below will take you through the guides in their proper order. Some gui
 ## The Guides
 
 1. [Development Tools](/guides/development-tools)
-2. [Getting The Template](#)
-3. [Template Overivew](#)
+2. [Getting The Template](/guides/template)
+3. [Static Sites](/guides/static-sites)
 
