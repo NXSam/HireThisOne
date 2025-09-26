@@ -1,0 +1,84 @@
+---
+title: MDX Support
+description: Adding a feature to make the site's documentation SO much better. It went nice and smooth too!
+pubDate: Sep 26 2025
+heroImage: ../../assets/images/blog/MDX-Support-added-blog.png
+category: Site News
+tags:
+  - guide
+  - development
+showImage: true
+showVideo: false
+YT: No
+alt: No
+author: Sam
+---
+
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/starwind/tabs";
+
+
+Development has been slow this week and writing has been even slower. I've been admittedly occupied sending out job applications. I saw a number of potential places to work and I didn't want to miss the opportunity, even if it did delay some progress here (which might come back to bite me - chicken and the egg type of problem).
+
+That doesn't mean development stops!
+
+As I was writing the first few guide pages, I wanted something more. Astro uses Markdown Files to build out content pages, which is great. Markdown gives us all quick and easy options for adding styles to text. We can add *italics*, **BOLDS**, <u>underlines</u> and other bits of texty decoration. It has support to embed images and other things too, create links, and other pieces of content.
+
+It's got no sense of style, flare, and flash.
+
+That's where MDX joins the party. Mark Down eXtended. This adds in support for bits of HTML and other things. NOW we can make things a little more complicated and a little prettier. For example:
+
+
+<Tabs defaultValue="Preview" class="max-w-[600px]" style="margin: auto; padding-top: 1rem; padding-bottom: 1rem;">
+  <TabsList>
+    <TabsTrigger value="Preview">Preview</TabsTrigger>
+    <TabsTrigger value="Code">Code</TabsTrigger>
+  </TabsList>
+  <TabsContent value="Preview">
+    We can preview how something should look.
+    A bit of material here. A <b>Style there</b>.
+    <u>A little substance and flare about what you see.</u>
+	
+  </TabsContent>
+  <TabsContent value="Code">
+    We can preview how something should look.
+    A bit of material here. A &lt;b&gt;Style there&lt;/b&gt;.
+    &lt;u&gt;A little substance and flare about what you see.&lt;/u&gt;
+
+  </TabsContent>
+</Tabs>
+
+It's a weird little addition, but it opens so many possibilities. 
+
+Astro supports components, which are bits and pieces we can load in, that contain the styles/javascript/material for little things like this to work. With MDX, we can load in a component and use it to jazz up a page. I'll be able to do previews and code views among other things. It can create some nice, handy, visual distraction and a little dynamicism for a page. 
+
+For example, things like this from the Starwind Dev Docs:
+
+
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/starwind/accordion";
+
+
+<Accordion defaultValue="item-1" style="margin:auto;padding:1.5rem;">
+  <AccordionItem value="item-1">
+    <AccordionTrigger>What is Astro?</AccordionTrigger>
+    <AccordionContent>
+      Astro is an web framework for building fast, scalable, and secure websites.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2">
+    <AccordionTrigger>Why should I use Astro?</AccordionTrigger>
+    <AccordionContent>
+      Astro provides a set of features that make it an ideal choice for building fast,
+      scalable, and secure websites.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-3">
+    <AccordionTrigger>How do I get started with Astro?</AccordionTrigger>
+    <AccordionContent>
+      To get started with Astro, follow the instructions in the documentation.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+
+I'll be adding these lil' pieces of flare to the future guide material and expanding on the guides to hopefully make them all the better. Sure, it's a small thing, but I'd rather get these as close to right as possible on the first swing than a second.
+
+Stay tuned for further updates! With any luck next week I'll be able to put out more material and maybe a blog on some animation work - possibly my last animation client project wrapped up for a while.
