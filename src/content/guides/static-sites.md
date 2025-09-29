@@ -3,7 +3,7 @@ title: Introduction To Static Site Generators
 description: Why this project isn't using PHP or other languages to build a dynamic site.
 pubDate: Sep 22 2025
 heroImage: ../../assets/images/guide-3/guide-3-header.png
-category: Showcase
+category: Concepts
 tags:
   - development
   - guide

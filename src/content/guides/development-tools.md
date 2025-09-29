@@ -3,7 +3,7 @@ title: Web Development Overview
 description: An overview of the tools, setup, and general process of building a website. Start your development journey here.
 pubDate: Sep 18 2025
 heroImage: ../../assets/images/guide-1/Guide-2-cover.png
-category: Showcase
+category: Overview
 tags:
   - development
   - guide
