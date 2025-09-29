@@ -1,8 +1,8 @@
 ---
 title: The Site Template
 description: A quick overview of getting the template files to begin the project.
-pubDate: Sep 29 2025
-heroImage: ../../assets/images/guide-4/guide4-header.png
+pubDate: Sep 21 2025
+heroImage: ../../assets/images/guide-2/guide-2-header.png
 tags:
   - development
   - guide

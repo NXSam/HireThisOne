@@ -23,4 +23,5 @@ The links below will take you through the guides in their proper order. Some gui
 1. [Development Tools](/guides/development-tools)
 2. [Getting The Template](/guides/template)
 3. [Static Sites](/guides/static-sites)
+4. [Project Structure](/guides/project-structure)
 
