@@ -18,7 +18,7 @@ try {
 
 <article class="card-surface p-4 h-full flex flex-col gap-3 relative">
   {post.data.heroImage && (
-    <Image width={640} height={360} src={post.data.heroImage} alt={post.data.title} />
+    <Image width={640} height={360} src={post.data.heroImage} alt={post.data.title} class="w-full object-cover min-h-[150px] max-h-[150px]"/>
   )}
   <h3 class="text-xl font-semibold text-[color:var(--color-text-primary)]">{post.data.title}</h3>
   <p class="text-[color:var(--color-text-muted)]">{post.data.description}</p>
