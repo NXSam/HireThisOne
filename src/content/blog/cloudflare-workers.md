@@ -2,7 +2,7 @@
 title: That was EASY!?
 description: The site is live and there were no headaches!?
 pubDate: Sep 19 2025
-heroImage: ../../assets/images/blog/Cloudflare-blog.png
+heroImage: "@blog/Cloudflare-blog.png"
 category: Site News
 tags:
   - observation

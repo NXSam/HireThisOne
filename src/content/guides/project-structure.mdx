@@ -2,7 +2,7 @@
 title: Astro Project Structure
 description: An overview of the tools, setup, and general process of building a website. Start your development journey here.
 pubDate: Sep 29 2025
-heroImage: ../../assets/images/guide-4/guide4-header.png
+heroImage: "@guides/guide-4/guide4-header.png"
 category: Concepts
 tags:
   - development
@@ -13,7 +13,7 @@ The guides so far have covered development tools, static site generators, and cr
 
 If you haven't already, open Visual Studio Code and choose the Open Folder option. Browse to your website and open it. You may be prompted to install extensions and trust authors. VS Code can load some included modules designed specifically for Astro projects and Markdown files. If you're willing to trust these projects, click Trust, Install, etc as prompted. If not, select Don't Trust and install extensions of your own choosing later.
 
-![A screenshot of the VS Code project with the directory tree shown](../../assets/images/guide-4/directory.png)
+![A screenshot of the VS Code project with the directory tree shown](@guides/guide-4/directory.png)
 
 Clicking the top left icon will show a directory tree like this. Clicking any arrow will open a drop down to show its contents.
 # Basic Config Files
@@ -70,7 +70,7 @@ If your site were to host a file like a PDF document, a resume or something of t
 
 src or Source is where all the dynamic and coded pieces of the site are stored. These are files that Astro will read, string together, edit, and alter to build the final site. Images store in this folder will be optimized to faster performance, blog files will be turned into blog web pages. Everything here is meant be dynamic. 
 
-![A screenshot of the src directory in VS Code. It contains the directories: assets, components, content, data, layouts, lib, pages, and styles. There are files consts.ts and content.config.ts](../../assets/images/guide-4/source.png)
+![A screenshot of the src directory in VS Code. It contains the directories: assets, components, content, data, layouts, lib, pages, and styles. There are files consts.ts and content.config.ts](@guides/)guide-4/source.png)
 
 There are two important files here that should be tweaked right away. First, consts.ts:
 
@@ -92,7 +92,7 @@ Many of the other folders will have similar files. The Data folder contains auth
 
 The Components, Lib, Pages, and Layout folders contain the code that makes the backbone of the site. These files specify where and how content goes on the site, what the pages will look like, and so on. Most of them are .astro files.
 
-![A screenshot of the root index.astro file found in /src/pages/index.astro](../../assets/images/guide-4/astroFile.png)
+![A screenshot of the root index.astro file found in /src/pages/index.astro](@guides/guide-4/astroFile.png)
 
 There are sections named WorkExperience and Studies, corresponding to the work.ts and studies.ts files.
 
