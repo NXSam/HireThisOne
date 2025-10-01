@@ -2,7 +2,7 @@
 title: Project Overview
 description: A top down look at the project and an index of the guides in their proper order.
 pubDate: Sep 18 2025
-heroImage: ../../assets/images/guide-1/Guide-1-cover.jpg
+heroImage: "@guides/guide-1/Guide-1-cover.jpg"
 tags:
   - development
   - guide

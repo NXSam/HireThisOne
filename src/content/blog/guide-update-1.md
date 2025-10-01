@@ -2,7 +2,7 @@
 title: Guide Update
 description: I had an idea to make my guides better, but it's gonna slow progress. No one ever said this would be quick.
 pubDate: Sep 22 2025
-heroImage: ../../assets/images/blog/blog-3-cover.jpg
+heroImage: "@blog/blog-3-cover.jpg"
 category: Site News
 tags:
   - observation

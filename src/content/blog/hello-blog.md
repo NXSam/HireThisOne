@@ -2,7 +2,7 @@
 title: Hello World! We're Finally Live!
 description: The first post on this blog and celebrating the day the site was ready to go live! It's not done, but it exists!
 pubDate: Sep 18 2025
-heroImage: ../../assets/images/blog/blog-1-cover.jpg
+heroImage: "@blog/blog-1-cover.jpg"
 category: Site News
 tags:
   - celebration
