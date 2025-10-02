@@ -1,0 +1,115 @@
+---
+title: First Code Changes
+description: Some basic exercises in editing your website and altering its contents.
+pubDate: Sep 29 2025
+heroImage: "@guides/guide-4/guide4-header.png"
+category: Development
+tags:
+  - development
+  - guide
+  - coding
+author: Sam
+---
+In the [template guide](/guides/template) you downloaded the source files for the site, installed some code with NPM, and learned to run a preview of that site with **npm run dev**. In this guide we're going to start actually editing the template to build your site.
+
+First, open your terminal, get your site opened, and run:
+
+```shell
+npm run dev
+```
+
+![Terminal output from running npm run dev. The text includes: > first-template > astro dev Generated /syncing content, Astro v 5.13.2 ready in 741ms, LOCAL: http://localhost:4321](@guides/guide-5/terminal-1.png)
+
+Second, let's look at the site preview. Open a browser of your choice and go to: [localhost:4321](http://localhost:4321). If that doesn't work, check the Terminal Window for the address of your site preview.  
+
+&nbsp;
+
+
+![A screenshot of the website. It should look similar to the front page of HireThis.One, but orange and with different text](@guides/guide-5/website_1.png)
+
+
+&nbsp;
+
+
+import { Alert, AlertDescription, AlertTitle } from "@/components/starwind/alert";
+
+<Alert variant="warning"><AlertTitle>Multiple Instances of Command Prompt</AlertTitle>  <AlertDescription>It is possible to have multiple Power Shell, Terminal, and Command Prompt windows open, each of them running a preview of the same site. When this happens, the URL will change from: localhost:4321 to localhost:4322, localhost:4323, and so on. </AlertDescription></Alert>
+
+# Editing the Site
+
+To edit the site, open Visual Studio Code (VS Code), then choose File -> Open Folder. In the dialog  open the astro-template folder like below. VS doesn't just open one file, but many files, in fact it can edit basically any and every file in the site, the perfect tool for the job.
+
+![An open folder dialog showing the contents of astro-template](@guides/guide-5/open-folder.png)
+
+In VS Code, use the sidebar on the left to find /src/pages/index.astro. This is the main home page of the site. Here you'll find the headline, your skills and work experience, and all the rest. It's a good place to make some quick edits and learn more about how the template works.
+
+![A screenshot of the file: /src/pages/index.astro](@guides/guide-5/index-1.png)
+
+Notice how the file has line numbers and color coding. Scroll down and compare the text in the file to the live preview of the website. Do you see anything similar? Perhaps "Your Headline Goes Here!" and "I build softwares that brings you loyal subscribers."
+
+Try changing these lines. Put in any headline and then check the live preview. Make sure to keep the quotes. Without the quotes the whole thing breaks. Nothing changed? Don't forget to save your file! Astro only knows to update its previews when the file's saved.
+
+There's something missing from the file though, where's all the work experience, skills, and those logos? That's Astro's special trick: they're in other files. In development, this makes it easy to reuse pieces of the website elsewhere and it means this is only a 70 line file instead of a messy 700 line file.
+
+So, how do we find those other files?
+
+``` html
+ <section class="py-6">
+
+      <ArrowSeparator />
+
+      <SkillsSection title="Skills & Tools" skills={skills} />  
+
+      <ArrowSeparator />
+
+      <WorkExperience title="Work Experience" items={work} />
+
+      <ArrowSeparator />
+
+      <Studies title="Studies" items={studies} />
+
+      <GlowLineSeparator />
+
+</section>
+```
+
+There's a hint in the code. The files we're looking for are related to {skills}, {work}, and {studies}. Check the rest of the file and see if those words show up anywhere else. You can just follow the breadcrumbs until you find the code you're looking for. Step by step you'll trace where code came from and learn how the site works.
+
+```javascript
+import { skills } from '../data/skills';
+import { work } from '../data/work';
+import { studies } from '../data/studies';
+```
+
+Line's 8, 10, and 12 mention skills, work, and studies in the data directory. Open /src/data/work.ts. Let's see if anything in there looks familiar or relevant to the rest of the home page.
+
+```json
+export const work = [
+  {
+    title: "Senior Software Engineer",
+    company: "Acme Cloud",
+    region: "United States",
+    description:
+      "Led the design and delivery of a multi‑tenant platform, decomposed critical monolith paths into services, improved p95 latency by 40%, defined SLOs and on‑call rotations, and mentored junior engineers.",
+    technologies: [
+      "TypeScript",
+      "Node.js",
+      "React",
+      "PostgreSQL",
+      "Redis",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "GraphQL",
+    ],
+  },
+```
+
+Let's try the same exercise as before: change something and look for that change. As you make changes, you might start to notice the format of the file. All the pertinent information here is stored with JSON, JavaScript Object Notation. Individual pieces of text are enclosed in quotes, they're separated by commas, and where there's a list, brackets or curly braces are used to mark what's in that list or group.
+
+You can add or remove from the technologies list by removing an entry or adding another, as long as there's a comma and quotes.
+
+Go ahead and start to edit the work.ts and studies.ts files. Take a look at skills.ts and notice how it's not quite the same. It's still the same format, but the layout is different and so are the contents. Each of these files has a custom layout built for a specific purpose. A future guide will cover the skills.ts file.
+
+Lastly, check out projects.ts. There's no trace of this file on the home page. See if you can find it on the website and maybe make some edits.
