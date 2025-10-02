@@ -12,7 +12,7 @@ import { calculateReadingTimeFromHtml } from '../../lib/reading';
 import { getEntry } from 'astro:content';
 
 const PAGE_SIZE = 6;
-const posts = (await getCollection('guides')).sort((a,b)=>+b.data.pubDate-+a.data.pubDate);
+const posts = (await getCollection('guides')).sort((b,a)=>+b.data.pubDate-+a.data.pubDate);
 // const [featured, ...rest] = posts;
 const firstPagePosts = posts.slice(0, PAGE_SIZE);
 const totalPages = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
