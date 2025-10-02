@@ -24,4 +24,6 @@ The links below will take you through the guides in their proper order. Some gui
 2. [Getting The Template](/guides/template)
 3. [Static Sites](/guides/static-sites)
 4. [Project Structure](/guides/project-structure)
+5. [First Code Changes](/guides/coding-exercise-1)
+
 
