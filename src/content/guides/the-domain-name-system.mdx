@@ -1,0 +1,61 @@
+---
+title: Naming Your Website - Working with DNS
+description: How does a website get it's name and how will you name your site? The basics to registering your site.
+pubDate: Oct 6 2025
+heroImage: "@guides/guide-6/guide-6-cover.png"
+category: Development
+tags:
+  - development
+  - guide
+  - coding
+author: Sam
+---
+Every website has its name. You type in "Google.com" and you're there. Type in Amazon and the site loads. If you named your site Google.com, would it just show up in place of the real Google? Probably not.
+
+When you type in a website name, your computer queries a database known as the Domain Name System. It matches a website name (domain) with a record of where that website actually is, its' service or IP address. From there, your computer need only request the web page from that address and you see the site.
+
+The DNS system is overseen by ICANN, the Internet Corporation for Assigned Names and Numbers. This organization's job is to set out the rules and governance of naming on the internet. They regulate who can sell Domains, the process for updating records, what endings can be used with domains (.com, .net, etc), and overall keep the naming part of the internet running smoothly.
+
+To give your site a name, you'll need to get a domain from a Domain Registrar. These are companies that charge a fee for you to register and maintain control of a domain. Sites like [spaceship](spaceship.com), [porkbun](porkbun.com), and [cloudflare](cloudflare.com) have become popular places to buy and manage domains, among the hundreds of sellers out there.
+
+## Checking on a Name
+
+Before buying a domain, research your registrar of choice, and if they've got a good reputation and offer a good deal, it's time to look at picking your domain.
+
+![A picture of a Domain Name search box](@guides/guide-6/searchbox.png)
+
+For this guide, let's use [spaceship.com](https://spaceship.com) to have a quick way to check for domains. In the search box, let's type in a simple query. Look just for "rocket". Don't give it an ending, let's see what we can find for a single word.
+
+![A screenshot of search results for Rocket, it shows several unavailable and others for some multi-hundred-dollar price points](@guides/guide-6/rocket-results.png)
+
+**OW. My Wallet.**
+
+This can get expensive fast. Many domains are available for under $10-$20, but some cooler sounding names or more unique names are offered at a premium. The ending of the domain, the .com, .org, or .net part plays a crucial role.
+
+The domain's ending is called a TLD or **T**op **L**evel **D**omain. For a few decades, there were only a few TLD's available, the  ever well known .com's and .net's of the world. TLDs like .edu were reserved for educational purposes and .org is often associated with non-profit organizations. In the 2010s, newer TLDs were introduced, like .Productions, .News, and .One. There is an extensive list of options available. Some of these TLDs are more expensive than others.
+
+Some TLDs have restrictions about how they can be used. A TLD like .fox can only be used by Fox Broadcasting (that part sucks a bit, there will probably never be a site called McCloud.Fox or Star.Fox). Other TLDs have to be used for a specific purpose, ICANN and the registrars involved have reserved some for use only within a specific country or for a specific industry. These restrictions are rare, but they do exist.
+
+## Clever Naming
+
+A sure-fire way to have a stand out site is with a clever name. We can't register any cheap names just for Rocket, but what about Rock.It? Well, not on space ship. The .IT TLD is reserved for Italy and can only be used if you have a European residency. Now if you're in Europe and you want a cool site, maybe Rock.It is a viable option for you.
+
+![A screenshot of the domain pricing for Rocket.space, regularly priced at $10,350 per year, it's available at a discount, for $2587.50](@guides/guide-6/space.png)
+
+Rocket.space would be a cool name, but wow is that a deal breaker price. Over $2000 per-year to own and control that name. That's a fair few student loan payments, car payments, and a lot of model rockets. There are however, cheaper alternatives. We can add some words and spell out a longer name and get a cheaper (but cooler) domain from doing it.
+
+![A screenshot of the domain pricing for RocketFrom.space, it's only 98 cents!](@guides/guide-6/fromspace.png)
+
+A listing of the various TLD's and their pricings can be found at [tld-list.com](https://tld-list.com). It can help to scroll through here with some idea of what you want your site to be. An HVAC company might get a name like cool.store or absolutely.cool. There's options, millions of possibilities. You can spend days searching and then sometimes have a name come to mind.
+
+This site is the result of just such serendipity. There needed to be a name that would be really cool. A name that sends a message to job recruiters. Something clever. Well, this.one was taken. There's always that trick of a longer name. HireThis.one gets the job done just as well. Another spin on it could be HireMe.Now.
+
+## Recuring Costs and Migration
+
+Once you buy your domain, it'll have to be paid for year after year. This ensures that domains can be re-used once their prior owners cease to use them. Registering a domain is not having permanent control over that domain. Over time, the costs to register a domain may increase or change too. Sometimes a registrar increases their prices, while others offer a discount.
+
+The nice thing about domains is they can be transferred between registrars. That's beyond the scope of these guides, but there are directions widely available. If you want to change registrars for any reason, the process is available, though some registrars make it a more onerous and complicated process than others.
+
+If you've found a domain you're interested in and ready to commit to those costs, feel free to buy it. We'll cover setting up your domain and putting it to work later in these guides. There may be offers for webhosting and email in the checkout process, now's probably not the time to buy into those. We'll be hosting our site for free using Cloudflare. There's no need to buy into any of the available services offered.
+
+And hey, now that you've got a domain, edit your site files to name your site. Check in on the last guide and edit your consts.ts and astro.config.mjs files to update your site name.
