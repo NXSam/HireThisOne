@@ -1,0 +1,109 @@
+---
+title: Introduction To Markdown
+description: A human-readable file with images, styling, and more. Marking down your content for fun, profit, and ease of use.
+pubDate: Oct 9 2025
+heroImage: "@guides/guide-7/guide-7-cover.png"
+category: Development
+tags:
+  - development
+  - guide
+  - markdown
+  - obsidian
+author: Sam
+---
+Every website needs its' content. There's a myriad of ways that content can get there. It can be created directly in code, like the pages covered in [our first edits](/guides/coding-exercise-1), it can be stored and retrieved from a specialized database, and it can be written in plain and easy to read text files, that our code processes into web pages.
+
+## The Markdown Format
+
+A markdown file is almost just a simple text file. It uses special characters and symbols to indicate how a piece of text should be styled. For example, this guide is written in Markdown. The text of the guide so far is clean and straight forward to read:
+
+``` Markdown
+Every website needs its' content. There's a myriad of ways that content can get there. It can be created directly in code, like the pages covered in [our first edits](/guides/coding-exercise-1), it can be stored and retrieved from a specialized database, and it can be written in plain and easy to read text files, that our code processes into web pages.
+
+## The Markdown Format
+
+A markdown file is almost just a simple text file. It uses special characters and symbols to indicate how a piece of text should be styled. For example, this guide is written in Markdown. The text of the guide so far is clean and straight forward to read:
+```
+
+That looks a little different than the web page, doesn't it? It's still readable though. There are many conventions for how to encode formatting in a Markdown file. We can create **bolded text** with a pair of asterisks (\*) or use just one *asterisk* for italics. 
+
+
+| **We can even create** | **a standard, multi-column** | **table of anything we want** | **in Markdown** |
+| ---------------------- | ---------------------------- | ----------------------------- | --------------- |
+| 3                      | Apples                       | $4.99                         | $14.97          |
+| 1                      | Document                     | $1.00                         | $1.00           |
+| 1                      | Ease of Use                  | $0.00                         | Priceless       |
+
+This approach lets us create files that any person can read, even without a special tool or experience. Every little bit of this can be read by a human. At the same time, tools like Astro can convert all of our Markdown into code that works on a website too. 
+
+Most articles only need a little formatting. An article needs header text, images, links, and maybe some extra material for <mark>emphasis.</mark> That makes Markdown an ideal format, as long as you're willing to look up the little bits that control text styling.
+
+```Markdown
+That looks a little different than the web page, doesn't it? It's still readable though. There are many conventions for how to encode formatting in a Markdown file. We can create **bolded text** with a pair of asterisks (\*) or use just one *asterisk* for italics. 
+
+
+| **We can even create** | **a standard, multi-column** | **table of anything we want** | **in Markdown** |
+| ---------------------- | ---------------------------- | ----------------------------- | --------------- |
+| 3                      | Apples                       | $4.99                         | $14.97          |
+| 1                      | Document                     | $1.00                         | $1.00           |
+| 1                      | Ease of Use                  | $0.00                         | Priceless       |
+
+This approach lets us create files that any person can read, even without a special tool or experience. Every little bit of this can be read by a human. At the same time, tools like Astro can convert all of our Markdown into code that works on a website too. 
+
+Most articles only need a little formatting. An article needs header text, images, links, and maybe some extra material for <mark>emphasis.</mark> That makes Markdown an ideal format, as long as you're willing to look up the little bits that control text styling.
+```
+
+For places where there isn't an existing Markdown shortcut, MD files still work with HTML too. Notice the text about with Emphasis. There wasn't a combination of asterisks, slashes, or dots that could signal <mark>emphasis</mark> but we could trigger it with an HTML-like tag. Not every HTML tag works here, but there's enough to get the job done.
+
+## Markdown in Astro
+
+In the case of a static site generator like Astro, a Markdown file can be used almost anywhere. There are so many strange, fascinating, and complicated options available. Our code can  load content from markdown files into templates, generate blog pages, reference pieces of files, and more. There are options far beyond the material covered here in these guides.
+
+For the purposes of the website template, Markdown is used to power the Blog pages. Astro has a Collection for the Blog Pages, it knows that everything in the content/blog/ folder that ends in .MD is meant to be a blog post in its own right. When Astro generates a site, it gets all the matching files in that collection, translates them into web pages with a template file, and puts them in their right places. When you add a new file, Astro sees it and puts it in place.
+
+There is just a problem:
+
+How does Astro know to put the header image, title, author, date, and all in there?
+
+![A screenshot of one of this blog's header areas, including the image, author, date, etc](@guides/guide-7/header-example.png)
+
+Markdown has one other handy feature: frontmatter.
+
+```Markdown
+---
+title: Introduction To Markdown
+description: A human-readable file with images, styling, and more. Marking down your content for fun, profit, and ease of use.
+pubDate: Oct 9 2025
+heroImage: "@guides/guide-7/guide-7-cover.png"
+category: Development
+tags:
+  - development
+  - guide
+  - markdown
+  - obsidian
+author: Sam
+---
+```
+
+This never shows up as article-content. Frontmatter is instead metadata, it's information about the blog post, such as its tags, category, the title of the page itself, and author. The Site Template has been set up specifically to read in these pieces of information and apply them to the blog posts and their pages.
+
+Anything can be stored in frontmatter, perhaps a summary of the post, a link, or  even a checkbox to hide a secret on the page. Astro can access all the front matter and if there's a corresponding use of it in the site's code, it'll show up or be used accordingly.
+
+Open your site files and check out the template markdown files in your blog folder. In particular, pay attention to the file <mark>markdown-style-guide.md</mark>. This file contains a number of examples of markdown formatting. Additional examples of Markdown can be found at: https://www.markdownguide.org/. 
+
+A future guide will cover using Obsidian to edit Markdown files for your site.
+
+### One Last Thing...
+
+There are some people who'll surely ask about other tools. There are many, many document authoring tools out there, "word processors", and similar suites. The question should be answered, because when you're just starting out, you don't know. These guides were made to cover every little detail for new developers.
+#### What about Microsoft Word? Can't I use that?
+
+Not all text files are made the same. Files in proprietary formats like Microsoft's .doc/.docx file or Adobe's .PDF file have limited uses in for making web content. The key advantage of Markdown files is that they're human and machine readable. The file format itself is incredibly small, simple, and to the point.
+
+Tools like Micorosft Word don't have that particular arrangement in mind. 
+
+![A screenshot of a Microsoft .docx file opened in a plain text editor, it's very illegible, almost random-seeming nonsense.](@guides/guide-7/msword.png)
+
+Files in formats like this don't work well with web development tools, even if there are ways to create custom apps and websites that work with Word, PDF, and other files. 
+
+This is one of those cases where two things can serve the same core purpose, but be incompatible in the long run. A sledgehammer and a hammer can both drive a nail into wood, but one is certainly better at the job than the other. A screwdriver can be a prybar, but it might only do the job once and with great effort. Markdown and Word are both for textual documents, but one of them is better suited to web purposes.
