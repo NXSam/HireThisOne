@@ -10,24 +10,36 @@ showVideo: false
 showImage: true
 ---
 
-My whole career has been spread between industries. I'm a developer, no I'm an artist, no I'm a video editor, technical artist, graphic designer, tech support, analyst, web developer, sys-admin—NO! I'm--
+My whole career has been spread across industries. I'm a Developer, Technical Writer, Animator, Artist, Editor, Tech Support, Analyst, Web Developer, System Admin, Manager, and so much more. At the heart of it, I'm an excellent learner who eagerly dives in to solving problems and learning new skills to do so. Step by step I have accumulated experiencing doing work in a dozen plus fields in scores more industries.
 
-As a freelancer, I've worn every hat, done a dozen jobs, and always taught myself how to do whatever came next. It's great that I've gotten to do a million things, but it's hard to put those skills into a resume and even harder to sell them to a recruiter. My job history is a hundred contracts long and spans almost as many industries and roles. Personally, I don't think there's many jobs I couldn't do. The problem however, is proving that to the people writing the checks.
+Out of all of my skills, I've chosen to focus on Technical Writing in my pursuit of full-time work.
 
-I've set out to become a Technical Writer and leave freelancing.
+I could work in a dozen different pursuits, but they all seem to be burning down right now. The creative industry is burning down, with constant lay offs at major studios and AI seen as an existential threat to workers in Animation, Video Production, and Graphic Design. With over a decade of experience in small businesses and sales, I could pursue work as a business analyst, but the recent shake ups in the market make that seem a bad idea too. Development is good, every business in the world needs a developer, but that doesn't leverage all of my skills.
 
-I just don't - didn't - have the proof of my abilities. I've needed something to get my foot in the door with any potential employer. I can show up with videos, but that doesn't mean I can write and document anything. I can point to my coding experiences, but they don't stand out on the resume. I could spend another year tracking down freelance writing jobs, but that's more overhead and freelancing.
+What would?
 
-Instead, I'll just make the proof myself.
+Technical writing.
 
-This website is a demonstration of my ability to work with new and unfamiliar technology, to create documentation about that technology, and showcase my existing work in pursuit of steady work in an industry that's drawn my interest.
+A technical writer's job is to research and present information. That information can take a dozen forms: FAQ's, Guides, Tutorials, Knowledge Bases, Manuals, Reports, and more. Documentation can be made better with media: pictures and video demonstrating the content. Some documentation needs a developer who's extremely good at reading and understanding code to translate that into useful API write ups. Many documentation tools require some experience with web development to implement HTML and CSS.
 
-Maybe the name, HireThis.One will get a laugh from the right recruiter or act as the right directive for an AI screening system to pick me out of the pool of applicants.
+Who would make a great technical writer?
 
-Information about creating this site will be [posted in Guides](/guides) for all to read about replicating this site, from ideation to final posting to Cloudflare. I'll endeavor to write in multiple styles to demonstrate both specific step by step guides and more casual overviews of concepts at large.
+Someone who:
+- Has hands on experience training others of all skill levels
+- Has written extensive documentation
+- Has deep experience with research and learning new material
+- Created videos, graphics, and writing to train others
+- Has worked with numerous development languages
+- Quickly absorbs new information
 
-The site's code [will be posted on Github](https://github.com/SWC4/HireThisOne) for all to read and examine. I'm not the world's greatest web developer, so it's definitely flawed, but it works. It's my first time using Astro and I'd say it's gone pretty well so far!
+I've spent a decade on the job, but in the quiet background. I wrote tools and documentation for [Procure Inc](/portfolio/procure-inc); performed web development, R&D, fabrication, training, research, and documentation for [Illusion Ranch](/portfolio/illusion-ranch); and spent a decade creating instructive material for a hundred clients in [my own freelancing](/portfolio/demoreel).
 
-Additional details will be [posted to the blog](/blog). 
+In all of that, my writing has been in the background. I've been published on at least three blogs that closed down during the pandemic. My written work has been internal to my clients and often covered by NDAs.
+
+I'll have to just make my own documentation examples.
+
+This site is my portfolio for Development and Documentation. Beginner-focused guides on web development using Astro to build a site just like this are [posted in guides](/guides/) with more being added every week. My code is publicly post to [Github](https://github.com/NXSam/HireThisOne) so employers can see I can in-fact code.
+
+This is my project to help shove my search for a job forward in an extremely challenging job market. I have always been one of the best at what I do and I intend to keep being a top tier asset, even if I have to build the proof myself.
 
 

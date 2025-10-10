@@ -62,6 +62,12 @@ The move to GSuite brought us Google Drive, shared files, and slowly I started t
 
 By the time COVID hit, the lockdowns were nothing for the company. Everyone had secure web access, our work was digital, and we went work from home for all the office and sales work. While companies all over the world had some growing and transitioning pains to remote work, our little team was already meeting in Slack and powering our way through the world-wide sales slump.
 
+### Document Everything
+
+Every improvement came with documentation and guides. I wrote scripts for GSuite that would automatically generate pieces of product meta data, those had a full write up. When we got the crawlers going, I had a step by step guide covering the process from A-Z. We moved to cloud based systems and I provided full documentation for how to keep our systems organized, what went where, how to use different tools, and how to keep the team moving clean and smooth. Each guide was full of pictures, steps, and explanations for not just what to do, but why we did what we did.
+
+My documentation kept everything moving and kept the entire team on the same page. I was our team's fastest worker for gathering data, analyzing our results, and updating the site. My tools and the guides that went with them elevated the entire team. There weren't other Excel experts, but with my tools, we didn't all need to be excel experts to move just as fast as one.
+
 ## Keep Building Better
 
 Every job or task is an opportunity to make something better. With Procure, I've spent every chance I could streamlining, upgrading, and improving. That doesn't mean taking a wrecking ball to the successful processes we have. It means finding the little pieces and making them better. String enough little upgrades together and you get a massive improvement.

@@ -8,7 +8,8 @@
     "paths": {
       "@/*": ["src/*"],
       "@blog/*":["src/assets/images/blog/*"],
-      "@guides/*":["src/assets/images/guides/*"]
+      "@guides/*":["src/assets/images/guides/*"],
+      "@images/*":["src/assets/images/*"]
     }
   },
   "exclude": ["node_modules"]
