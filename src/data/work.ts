@@ -17,7 +17,7 @@ export const work = [
     description:
       "A decade and counting in delivering creative, writing, and development services to over 100 clients, achieving a 100% Success Score on Upwork.",
     technologies: [
-      "Blender", "Avid Media Composer", "Adobe Suite", "Python", "Unity", "C++", "Python", "AWS", "Wordpress", "Substance 3D", "PHP", "Javascript", "C#", "Fedora", "Redhat",
+      "Blender", "Markdown", "HTML", "Obsidian", "Avid Media Composer", "Adobe Suite", "Python", "Unity", "C++", "Python", "AWS", "Wordpress", "Substance 3D", "PHP", "Javascript", "C#", "Fedora", "Redhat",
     ],
   },
   {
@@ -27,7 +27,7 @@ export const work = [
     description:
       "Built the Illusion Display System, all of Illusion Ranch's websites and partner websites, animated instructional videos, provided visual effects, and fixed technical issues in the studio. I was the go-to guy for making problems go away.",
     technologies: [
-      "Avid Media Composer", "AWS", "Wordpress", "Redhat", "Blender", "3D Printing", "Adobe Suite"
+      "Avid Media Composer", "Markdown", "Hugo", "Obsidian", "HTML", "Javascript", "AWS", "Wordpress", "Redhat", "Blender", "3D Printing", "Adobe Suite"
     ],
   },
   {
@@ -37,7 +37,7 @@ export const work = [
     description:
       "Built and maintained each iteration of Procure's web-presence, drove improvements in product pricing strategies, automated internal processes, and drove better marketing.",
     technologies: [
-      "Shopify", "Wordpress", "Magento", "Big Commerce", "Adobe Suite", "Python", "PHP",
+      "Shopify", "Wordpress", "Magento", "Big Commerce", "Adobe Suite", "Python", "PHP", "GSuite", "Office 365", "Markdown"
     ],
   },
 

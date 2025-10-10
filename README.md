@@ -1,34 +1,49 @@
 # Hire This One
-### A website to showcase my writing and other work for potential employers
-**Theme/Template/etc from [guihubie](https://github.com/guihubie/free-astro-templat)**
+
+
+<img alt="Image" src="https://github.com/user-attachments/assets/511bb81c-763d-472d-982f-55495e071c73" />
+
+This site is the website version of a resume, complete with working samples and a full code/development history of how it came to be. It's built on Astro.js using Node and currently live at [https://hirethis.one](https://hirethis.one/?utm_source=github&utm_content=readme). 
+
+
+## 🗂️ A Portfolio & Training Resource
+
+Every job needs work samples. My work samples come in the form of this website. It contains a full guide on how to create a site just like it, aimed at a beginner audience. This guide is in-progress as of 10/10/2025 and contains 7 sections so far with more to come. 
+
+Topics covered include:
+
+- ⭐ Astro JS
+- ☁️ Cloudflare
+- 🖥️ Terminal Interfaces
+- 🌐 Domain Name System & Registrars
+- ✒️ Markdown Files
+- 📝 Web Development
+
+Users will be able to download a template file, edit its contents, build the site, and deploy to cloudflare by completion of the guide series, reguardless of their prior development experience.
+
+
+## 🔧 Requirements
+
+To build this portfolio site, you will need:
+
+    Node.js 18+ (or 20+ recommended)
+    npm (or pnpm/yarn)
+
+
+To view the site locally, run:
+
+```
+npm install
+npm run dev
+```
+
+Consult the guides on the [live site](https://hirethis.one/guides/?utm_source=github&utm_content=requirementslink) for further guidance in building and customizing this and other sites like it.
+
+
+## 🗓️ Updates
+
+The goal is to make 1-2 updates to the site's content per week, but this isn't guaranteed.
 
 
 
-
-What do you do when you have the skills to do a job, but not the right portfolio pieces to get the job?
-
-
-Make them yourself.
-
-
-Over a decade ago, I set out with the goal of being an animator. I was dedicated to the art and science of production, studied all the tools, and even branched into graphic design, web development, product design, and so much more. I freelanced for a hundred different clients in a decade, writing, coding, animating, editing, and building a portfolio of work and a reputation for excellence. Over that decade of work, I saw layoffs at the big studios, layoffs in the games industry, and a market where my end goal of working somewhere big like Disney, Dreamworks, or Insomniac started to look like a bad idea. How many artists get the rugs pulled right from under them when a production finishes? 
-
-
-I want to pivot my skills into the field of Technical Writing. I am excelent at research and communication, my skills in python, C++, PHP, and such are good enough to make things work, and I'm no novice in writing. I know enough to read and reverse engineer code, understand it, and explain it. I've even written a manual for building a tiny home for one of my clients. My skills are perfect for the job, if only I had a way to make that case to recruiters and hiring managers.
-
-
-If the problem is proof of my abilities, why don't I just make it?
-
-
-# So what is this site, exactly?
-
-
-This site will host a mix of the work I've created throughout my freelance career and new work created specifically to showcase my abilities as a writer for prospective employers.
-
-What new work? Half of this website's purpose is to be a Guide for creating and deploying your own website like it. That's right, this website is its own documentation. As I fill in the content and update material, the site's own web pages will contain the step by step process used for making it.
-
-I'll also include my work in animation and writing about my experiences. And attempt some social media marketing as (@HireThisOne)[https://bsky.app/profile/hirethis.one].
-
-Jump in and enjoy the ride.
-
-This site will eventually go live at [https\://HireThis.One](https://HireThis.One)
+**Original Template from [guihubie](https://github.com/guihubie/free-astro-templat)**

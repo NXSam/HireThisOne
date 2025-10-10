@@ -7,6 +7,14 @@
 
 
 export const projects = [
+		{
+		title: "Hire This One",
+		techStack: "Astro • Node JS • HTML • Obsidian • Cloudflare",
+		description: "This very website, a portfolio, a walk-through guide, a blog, and more..",
+		ctaText: "Read Case Study →",
+		ctaLink: "/portfolio/hire-this-one",
+		// icon: SupabaseIcon
+	},
 	{
 		title: "Demo Reel",
 		techStack: "Blender • After Effects • Premiere • Substance 3D • Photoshop • Reality Capture",
@@ -14,14 +22,6 @@ export const projects = [
 		ctaText: "Read More →",
 		ctaLink: "/portfolio/demoreel",
 		// icon: N8nIcon
-	},
-	{
-		title: "Hire This One",
-		techStack: "Astro • Node JS • HTML • Obsidian • Cloudflare",
-		description: "A quick write-up about this very site, why I made it, and how it came to be.",
-		ctaText: "Read Case Study →",
-		ctaLink: "/portfolio/hire-this-one",
-		// icon: SupabaseIcon
 	},
 	{
 		title: "Procure Inc Automation, Graphics, and Design",
@@ -39,21 +39,21 @@ export const projects = [
 		ctaLink: "/portfolio/illusion-ranch",
 		// icon: TailwindIcon
 	},
-	// {
-	// 	title: "Aquashield Animation",
-	// 	techStack: "Blender • FLIP Fluids • After Effects • Premiere",
-	// 	description: "A tight two-week turn around with full fluid simulation and environment modeling.",
-	// 	ctaText: "Read Case Study →",
-	// 	ctaLink: "#",
-	// 	// icon: PosthogIcon
-	// },
-	// {
-	// 	title: "Chang'e Animations",
-	// 	techStack: "Blender • Python • Premiere • After Effects • Substance 3D",
-	// 	description: "Working with a tech prototype to create a one of its kind animation I'll never get to experience again.",
-	// 	ctaText: "Read Case Study →",
-	// 	ctaLink: "/portfolio/change-animation",
-	// 	// icon: SupabaseIcon
-	// },
+	{
+		title: "Augmented Reality in iOS",
+		techStack: "Blender • XCode • Swift • Python",
+		description: "An adventurer in solving the problem a dozen developers got stuck on, creating realism in Apple AR.",
+		ctaText: "Read Case Study →",
+		ctaLink: "/portfolio/apple-ar",
+		// icon: PosthogIcon
+	},
+	{
+		title: "TTRPG Organization",
+		techStack: "Cloudflare • Docker • Foundry • Astro • Obsidian • Markdown • Whisper Transcript • OBS • AWS",
+		description: "Leveraging technology to deliver a better gaming experience around the world.",
+		ctaText: "Read More →",
+		ctaLink: "/portfolio/ttrpg",
+		// icon: SupabaseIcon
+	},
 
 ];
