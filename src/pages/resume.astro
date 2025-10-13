@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+import GlowLineSeparator from '@/components/ui/separator/GlowLineSeparator.astro';
+const pageTitle = 'Resume';
+const pageDescription = 'Learn more about my background and work history.';
+---
+
+<Layout title={pageTitle} description={pageDescription} pubDate={new Date()} showHeader={false}>
+<p>
+Hello potential Recruiter, Employer, or Team!
+</p>
+<p>
+Over the past decade I have built a broad library of skills, delivering excellence for over 100 clients, maintaining high review scores, and delivering significant ROI with each project whether that was driving sales, improving marketing, or significant reductions in costs and turn around time.
+</p>
+<p>
+    My skills cover:
+<ul>
+    <li>Web Development</li>
+    <li>Systems Administration</li>
+    <li>Documentation</li>
+    <li>Technical Writing</li>
+    <li>Research</li>
+    <li>Software Development</li>
+    <li>Content Creation</li>
+</ul>
+</p>
+<p>
+    Check out my resume and feel free to hit that Contact button to reach out via email.
+</p>
+    <object class="pdf" 
+            data=
+"/downloads/SamCosta-TechnicalWriter.pdf"
+            width="800"
+            height="500">
+    </object>
+
+
+
+
+
+  <GlowLineSeparator />
+
+</Layout>
