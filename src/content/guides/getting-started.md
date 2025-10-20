@@ -26,6 +26,7 @@ The links below will take you through the guides in their proper order. Some gui
 4. [Project Structure](/guides/project-structure)
 5. [First Code Changes](/guides/coding-exercise-1)
 6. [Intro to Markdown](/guides/what-is-markdown)
+7. [Intro to Obsidian](/guides/intro-to-obsidian)
 
 
 
