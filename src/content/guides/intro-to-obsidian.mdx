@@ -1,0 +1,111 @@
+---
+title: A Look at Obsidian - an easy tool for making markdown pages on your site.
+description: We're using Markdown to create the blog pages and other content on your site. Wouldn't it be easier to have a tool just built to do that?
+pubDate: Oct 20 2025
+heroImage: "@guides/guide-8/guide-8-cover.png"
+category: Concepts
+tags:
+  - development
+  - guide
+author: Sam
+---
+So far these guides have covered:
+
+- Astro
+- VS Code
+- NPM
+
+This covers the platform powering your site, a code editor to make changes to the underlying code that drives it, and of course, a system to install Astro and other Javascript systems for your site. It's all the foundational pieces of your site except the big one: actually using it.
+
+VS Code can work with Markdown files, but [Obsidian](obsidian.md) offers some great advantages. It works across platforms, has an extensive plugins platform, and it has a friendly UI for handling Markdown Frontmatter.
+
+![A screenshot of the Obsidian Vault/Loading Screen](@guides/guide-8/obsidian-starter.png)
+
+Let's get the website added to Obsidian. When you first open it, you should be prompted to create or open a vault. In Obsidian, the folder containing your work is a vault. Click Open and then navigate to your website.
+
+![Obsidian file tree - it looks very similar to VS Code's file tree](@guides/guide-8/obsidian-files.png)
+
+This looks familiar, doesn't it?
+
+Obsidian works on a similar design principal to your VS Code editor. It doesn't work on just one file, but instead on dozens of files. You can have multiple files open, files loaded side by side, and in many other configurations. 
+
+In the Folder menu in the top left, navigate to:
+
+> /src/content/blog/
+
+Open example-post-1. Let's give this a look over, just like examining the code files in the prior guide posts. Let's see what makes these markdown files tick.
+
+![A screenshot of example-post-1 as opened in Obsidian](@guides/guide-8/obsidian-blog.png)
+
+We have 3 major parts of the post to look at. First there's the file name at the top. This file name is where the post will actually show up on the website. This webpage/guide post for example is named "intro-to-obsidian.md" and it's at [https://hirethis.one/guides/intro-to-obsidian](https://hirethis.one/guides/intro-to-obsidian).  Likewise, if you load your preview:
+
+> npm run dev
+
+Our example post will be available at:
+
+> http://localhost:4321/blog/example-post-1
+
+Other webplatforms would call this the "slug", the URL name of the page. Remember to name your blog posts accordingly for the future.
+
+### Front Matter
+
+After the file name there's all these Properties. As we did when looking at the web code, look at the blog post and see if you can discern any similarities. Most of these are pretty straight forward and you'll find them all fast.
+
+
+| Title       | The headline text for the blog post and the main blog page                                                                                      |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Description | A summary of the blog post, this only shows up in the /blog/ page.                                                                              |
+| pubDate     | The publication date! It controls the sort order of the blog too. This must be formatted Month, Day, Year.                                      |
+| heroImage   | This is our blog cover pic! If you check in assets/images/ you'll find the header image there. This is where you'll store your own headers too. |
+| category    | We can create custom categories, you might even have seen a special file that sets them up in VS Code.                                          |
+| tags        | These can be anything, they're descriptive words about a post, be it gardening, flying, or 'cooking secrets'                                    |
+
+These attributes will drive the functioning of your blogpost. With some code, we can add or remove other attributes, integrate them with the blog, and otherwise work to make the site more complex. That's a topic for a future tutorial.
+
+Let's look more at that hero image.
+
+> ../../assets/images/example-blog-hero1.jpg
+
+Previously, we covered how to navigate in a terminal. Using commands like CD and DIR to move and list things. We used **cd ..** to move up a directory. There's 2 dots over in that link too. This link is directions. It shows how to move from this file to the image. That's called a Relative Link, because it's relative to the file's location.
+
+Let's trace it out.
+
+../ - That's the content directory.
+../ - That's the src directory
+assets/ - we have logos, images, etc.
+images/  - and we're here, there's the example-blog-hero1.jpg file
+
+### Content
+
+You'll be using links like this a lot. Let's try something. Copy that link, or copy this piece of text:
+
+>\!\[A header image\]\(../../assets/images/example-blog-hero1.jpg\)
+
+Paste that into the blog post.
+
+![A screenshot of the obsidian blog, but with that image loaded in from the code above](@guides/guide-8/obsidian-image.png)
+
+This is where Obsidian shines. We can use Markdown and see the results in real-time. What you see in Obsidian should pretty closely match up against what's on your site. If you make a header with a single # or **some bold text**, it's going to look about the same in both places.
+
+In places where there isn't an existing piece of markdown, we can get away with some HTML and it'll carry over fine. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_cMxraX_5RE?" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" class="mx-auto" allowfullscreen></iframe>
+
+A youtube embed for example can be had by using youtube's share button, selecting embed, and copying the offered code. In this case, it's an Open Source halloween short called Sprite Fright. The same approach can be done for embedding a ton of other content, it's just simple HTML. This let's us extend what our Markdown can really do.
+
+import { Alert, AlertDescription, AlertTitle } from "@/components/starwind/alert";
+
+<Alert variant="warning"><AlertTitle>Centering Content</AlertTitle>  <AlertDescription>If you tried the youtube example, you might've noticed your video isn't centered. In your youtube embed, find the text &lt;iframe and insert class="mx-auto" after it. BOOM. Your video is centered. </AlertDescription></Alert>
+
+### Adding a Page
+
+Now, to make this fast and easy, let's add a new page. It can be done quick and lazy. Right click any of the blog post entries and choose "Make a copy". You now have a new blog post. Just rename the file and edit it to your heart's content.
+
+This approach is super fast and lets any blog post act as a template. It duplicates all the front matter so you need only make a few small changes and you're good to go. Just don't forget to update the pubDate. That mistake has befallen far too many awesome and amazing web developers who totally didn't forget to update the dates of their postings. It's never happened on this site.
+
+
+## Nearing Upload Time
+
+The skills covered so far allow you to edit the site, buy a domain, add content to it, and coming soon is the big one: putting your site live. You might even have enough skills already to just follow a tutorial on Cloudflare to get up and running right now.
+
+Or just check out the next tutorial here when it releases.
