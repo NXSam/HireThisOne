@@ -1,0 +1,107 @@
+---
+title: Going Live With Cloudflare
+description: Get your site online and visible to the whole world, using one of the world's biggest CDN providers.
+pubDate: Oct 27 2025
+heroImage: "@guides/guide-9/guide-9-cover.png"
+category: Concepts
+tags:
+  - development
+  - guide
+author: Sam
+---
+The day is finally here, we're going to go live with Cloudflare. This will make your site visible to the whole world, so make sure you're happy with it. And remember, if you're not happy? Don't let 'Perfect' be the enemy of 'Good.' It doesn't need to be perfect, just good enough.
+
+Prerequisites:
+- A Cloudflare Account
+- Your Site
+
+This tutorial will also cover connecting a domain to your site. This step is entirely optional. For the time being, we're going to assume you bought your domain from Cloudflare or you have already [onboarded your Domain at Cloudflare](https://developers.cloudflare.com/fundamentals/manage-domains/add-site/).  The exact process varies from registrar to registrar, so these guides will not contain exact and specific directions on that process. Consult with your registrar's documentation to update your nameservers to work with Cloudflare.
+
+
+import { Alert, AlertDescription, AlertTitle } from "@/components/starwind/alert";
+
+<Alert variant="warning">  <AlertTitle>Server Side Rendering</AlertTitle>  <AlertDescription>These directions and procedures will work with the site template used in this project and many other Astro Sites, but not all. Astro can perform Server Side Rendering, which requires additional preparation.  </AlertDescription></Alert>
+
+### Preparing Your Files
+
+There's a few ways to go live with Cloudflare. In our case, we're going to use a tool called Wrangler that will directly upload your assembled and ready site, directly from your local machine. More advanced users may want to look into using Cloudflare's CI/CD system that pulls your website from Github.
+
+Open a Terminal in your site directory, the same as you would to run previews and build your site. We have some commands to run.
+
+```shell
+npm install wrangler@latest --save-dev
+```
+
+This will install Wrangler, a tool which can upload your site to Cloudflare directly. Wrangler also needs its own configuration file. Using VS Code, create a new file in the root directory of your website and name it wrangler.jsonc.
+
+![A screenshot showing Wrangler.jsonc is under tsconfig.json in the project](@guides/guide-9/wrangler_location.png)
+
+Copy and paste the code below into your Wrangler file. This should all be pretty self explanatory, but there are some rules. The Name for example, cannot contain capital letters. It must be lower case, and no spaces, but a dash is fine. You will also need to update the date. 
+
+```json
+{  
+	"name": "my-astro-app",  
+	"compatibility_date": "YYYY-MM-DD", // Update to the day you deploy  
+	"assets": {
+	    "directory": "./dist",  
+			  }
+}
+```
+
+The current Wrangler file for HireThisOne looks something like:
+
+```json
+{
+
+  "name": "hire-this-one",
+  "compatibility_date": "2025-10-27", // Update to the day you deploy
+  "assets": {
+    "directory": "./dist",
+		    }
+}
+```
+
+
+### Going Live
+
+Now we're ready to use Wrangler, just a few more steps to go live. Let's create the final distribution-release of our site. This is similar to previewing it, but it's made ready to go live.
+
+>npx astro build
+
+Now we need Wrangler to preview it. This will ensure the site meets Cloudflare's rules for publication.
+
+>npx wrangler dev
+
+If all goes well, you'll be presented with the option to press B to open a preview, D for devtools, C to clear the console, and X to exit.
+
+If it doesn't, then Wrangler may throw an error like this one:
+
+![A screenshot of a wrangler error stating the file example-blog-hero6 is too large. Files up to 25MiB are permitted, but this file is 29.4MiB](@guides/guide-9/wrangler-error.png)
+
+It's important to make sure your site works with Wrangler Dev, or else this whole thing is just going to fail at deployment time. Check over your site in the preview, make sure everything is actually there.
+
+Everything good?
+
+>npx wrangler deploy
+
+This will run a command that will try to log you in with Cloudflare. It will attempt to open a link in your browser. If it fails to open, just ctrl-click and open it manually. It will ask for your permission to connect Wrangler to your cloudflare account. If you're comfortable with that, click Allow.
+
+Wrangler will proceed to prepare and upload your site. This may take longer for a more elaborate website. You'll need some patience.
+
+![A screenshot of the finished wrangler deployment. It shows a preview URL to view the site.](@guides/guide-9/wrangler-deploy.png)
+
+As you can see, it gave you a link! Copy/paste or control click on it to open the preview. There's your site! You're officially online and available to the public internet.
+
+### Your Domain
+
+The last step is your domain. Go to [https://dash.cloudflare.com](https://dash.cloudflare.com). From the left hand menu select Compute > Workers & Pages. Your site will show up in here. Click it.  We can ignore most of the material here, the piece we want most is under Settings.
+
+![A screenshot of the cloudflare worker settings page, showing the entries for Domains & Routes](@guides/guide-9/cf-domains.png)
+
+Type in the name of your domain and Cloudflare will validate it and show a preview of the record they're going to create. It will display an error for any domain not associated with your Cloudflare account. 
+
+![A screenshot of the domain entry for dev.hirethis.one about to be added to the site](@guides/guide-9/cf-entry.png)
+
+Click Add Domain, give it a few minutes, and your site is ready at that domain! We're live!
+
+This covers the initial goal of this guide series. There may be additional guides added in the future to address using Git, other platforms to deploy on like Netlify, and further customization of the site.
