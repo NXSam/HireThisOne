@@ -25,6 +25,6 @@
     "tw-animate-css": "^1.3.6"
   },
   "devDependencies": {
-    "wrangler": "^4.38.0"
+    "wrangler": "^4.45.0"
   }
 }
