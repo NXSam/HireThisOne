@@ -27,6 +27,8 @@ The links below will take you through the guides in their proper order. Some gui
 5. [First Code Changes](/guides/coding-exercise-1)
 6. [Intro to Markdown](/guides/what-is-markdown)
 7. [Intro to Obsidian](/guides/intro-to-obsidian)
+8. [Going Live with Cloudflare](/guides/going-live-with-cloudflare)
+
 
 
 
